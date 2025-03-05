@@ -1,9 +1,9 @@
-# Auditing Data Backup & Recovery in Windows
+# Data Backup & Recovery using Genie Backup Manager
 
-## Lab Overview
-This lab demonstrates how to audit **data backup and recovery** in a Windows environment, ensuring compliance with **ISO 27001, PCI DSS, NIST 800-53, and HIPAA**. The focus is on **policy enforcement, log verification, access control, and security monitoring**.
+## Description
+This lab demonstrates how to perform **data backup and recovery** using **Genie Backup Manager
 
-## **Lab Objectives**
+## Lab Objectives
 - Verify and document **backup policies, permissions, and security controls**.
 - Assess compliance with **data retention and recovery standards**.
 - Audit **backup encryption, access control, and restoration effectiveness**.
