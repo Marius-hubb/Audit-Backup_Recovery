@@ -13,7 +13,7 @@ This lab demonstrates how to **audit** data backup and recovery processes in Win
 
 ## Lab Walk Through
 
-### Verifying Backup Completion & Storage Location
+#### Verifying Backup Completion & Storage Location
    - Windows Server Backup > Local Backup
    - Backup location is set to the folder \\\DOMAINCONTROLL\Data Backup
 <p align="center">
@@ -21,31 +21,27 @@ This lab demonstrates how to **audit** data backup and recovery processes in Win
 <img src="https://i.imgur.com/Kfaz66R.png" height="50%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 
-### Security Audit of Backup Access Permissions
+#### Security Audit of Backup Access Permissions
    - Reviewing Backup Folder Permissions
 <p align="center">
 <br/>
 <img src="https://i.imgur.com/xhT0mpO.png" height="50%" width="80%" alt="Disk Sanitization Steps"/>
-<br /
+<br/>
 
-2. **Enable & Review Backup Access Logs**
-   - Open **Local Security Policy (`secpol.msc`)**.
+#### Enable & Review Backup Access Logs
+   - Open **Local Security Policy**
    - Navigate to:
      ```
      Security Settings > Advanced Audit Policy Configuration > Object Access > Audit File System
      ```
    - Enable **Success & Failure Logging** for the backup folder.
-   - Open **Event Viewer (`eventvwr.msc`)**, navigate to:
-     ```
-     Windows Logs > Security
-     ```
-   - **Filter for Event ID 4663 (File Access)**.
-   - **Audit Task**: Identify unauthorized access attempts and document findings.
+  <p align="center">
+<br/>
+<img src="https://i.imgur.com/IcpHtWd.png" height="50%" width="80%" alt="Disk Sanitization Steps"/>
+<br/>
+   
 
----
-
-### Step 3: Review Backup & Recovery Logs
-1. **Verify Backup Logs in Event Viewer**
+### Review Backup Logs
    - Open **Event Viewer (`eventvwr.msc`)**.
    - Navigate to:
      ```
@@ -54,7 +50,11 @@ This lab demonstrates how to **audit** data backup and recovery processes in Win
    - **Filter for Event IDs:**
      - **Backup Successful** → Event ID 4
      - **Backup Failed** → Event ID 49
-   - **Audit Task**: Document log details in the audit report.
+
+  <p align="center">
+<br/>
+<img src="https://i.imgur.com/5l6Eele.png" height="50%" width="80%" alt="Disk Sanitization Steps"/>
+<br/>
 
 2. **Check Recovery Logs**
    - Navigate to **Event Viewer** and filter for:
@@ -62,7 +62,7 @@ This lab demonstrates how to **audit** data backup and recovery processes in Win
      - **Recovery Failed** → Event ID 124
    - **Audit Task**: Verify recovery attempts and confirm success/failure.
 
----
+
 
 ## Audit Report Checklist
 - **Backup process completed successfully (`wbadmin.msc`).**  
