@@ -33,7 +33,7 @@ This lab demonstrates how to **audit** data backup and recovery processes in Win
      ```
      Security Settings > Advanced Audit Policy Configuration > Object Access > Audit File System
      ```
-   - Enable **Success & Failure Logging** for the backup folder.
+   - Enable **Audit File System**.
   <p align="center">
 <br/>
 <img src="https://i.imgur.com/IcpHtWd.png" height="50%" width="80%" alt="Disk Sanitization Steps"/>
