@@ -83,12 +83,4 @@ This lab demonstrates how to **audit** data backup and recovery processes in Win
      - **Recovery Failed** → Event ID 124
    - **Audit Task**: Verify recovery attempts and confirm success/failure.
 
-
-
-## Audit Report Checklist
-- **Backup process completed successfully (`wbadmin.msc`).**  
-- **Backup logs verify successful execution (`eventvwr.msc`, Event ID 4).**  
-- **Access permissions properly configured (No 'Everyone' access).**  
-- **Access logs reviewed for unauthorized attempts (Event ID 4663).**  
-
 ---
