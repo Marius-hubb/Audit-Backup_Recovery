@@ -49,16 +49,22 @@ This lab demonstrates how to **audit** data backup and recovery processes in Win
    - **Filter for Event IDs:**
      - **Backup Successful** → Event ID 4
      - **Backup Failed** → Event ID 49
-   - Navigate to:
-      ```
-     Windows Logs > Security
-     ```
-   - **Filter for Event ID 4663 (File Access)**.
+
   <p align="center">
 <br/>
 <img src="https://i.imgur.com/5l6Eele.png" height="50%" width="80%" alt="Disk Sanitization Steps"/>
 <br/>
 
+   - Navigate to:
+      ```
+     Windows Logs > Security
+     ```
+   - Filter for Event ID 4663 (File Access).
+  <p align="center">
+<br/>
+<img src="https://i.imgur.com/DRUd8gk.png" height="50%" width="80%" alt="Disk Sanitization Steps"/>
+<br/>
+     
 #### Perform Recovery Test in Windows Server Backup
   <p align="center">
 <br/>
