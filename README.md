@@ -1,9 +1,9 @@
-# 🔒 Auditing Data Backup & Recovery in Windows
+# Auditing Data Backup & Recovery in Windows
 
-## **📚 Lab Overview**
+## Lab Overview
 This lab demonstrates how to audit **data backup and recovery** in a Windows environment, ensuring compliance with **ISO 27001, PCI DSS, NIST 800-53, and HIPAA**. The focus is on **policy enforcement, log verification, access control, and security monitoring**.
 
-## **🔍 Lab Objectives**
+## **Lab Objectives**
 - Verify and document **backup policies, permissions, and security controls**.
 - Assess compliance with **data retention and recovery standards**.
 - Audit **backup encryption, access control, and restoration effectiveness**.
@@ -11,9 +11,9 @@ This lab demonstrates how to audit **data backup and recovery** in a Windows env
 
 ---
 
-## **💻 Lab Tasks**
+## **Lab Walk Through**
 
-### **✅ Step 1: Verify Backup Policies & Configuration**
+### **Step 1: Verify Backup Policies & Configuration**
 1. **Check Backup Policies in Group Policy**
    - Open **Group Policy Management Console (GPMC)** (`gpedit.msc`).
    - Navigate to:
@@ -23,19 +23,20 @@ This lab demonstrates how to audit **data backup and recovery** in a Windows env
    - Verify whether **backup policies are enabled** and aligned with security policies.
    - Document policy settings and compliance gaps.
 
-2. **Check Backup Storage Location & Access Permissions**
-   - Open **File Explorer** and navigate to the backup folder (`C:\Data Backup`).
+2. **Create a Backup Folder & Check Permissions**
+   - Open **File Explorer** and navigate to the `C:` drive.
+   - **Manually create a folder** named `Data Backup` (`C:\Data Backup`).
    - Right-click **Properties** > **Security Tab** > **Advanced**.
    - Verify **who has access** and document any **excessive permissions**.
    - Run PowerShell to list folder permissions:
      ```powershell
      Get-Acl "C:\Data Backup" | Format-List
      ```
-   - If **"Everyone"** has Full Control ➔ **Report a security risk**.
+   - If **"Everyone"** has Full Control → **Report a security risk**.
 
 ---
 
-### **✅ Step 2: Perform & Audit a Windows Server Backup**
+### **📌 Step 2: Perform & Audit a Windows Server Backup**
 1. **Launch Windows Server Backup (`wbadmin.msc`)**
    - Navigate to **Local Backup** > **Backup Once**.
    - Select **Custom Backup** and add the folder (`C:\Internal Files`).
@@ -50,7 +51,7 @@ This lab demonstrates how to audit **data backup and recovery** in a Windows env
 
 ---
 
-### **✅ Step 3: Simulate Data Loss & Audit Recovery Process**
+### **📌 Step 3: Simulate Data Loss & Audit Recovery Process**
 1. **Simulate an Accidental Deletion**
    - Navigate to **C:\Internal Files**.
    - **Delete the folder** and empty the Recycle Bin.
@@ -72,7 +73,7 @@ This lab demonstrates how to audit **data backup and recovery** in a Windows env
 
 ---
 
-### **✅ Step 4: Security Audit of Backup & Recovery Logs**
+### **📌 Step 4: Security Audit of Backup & Recovery Logs**
 1. **Verify Backup & Recovery Logs in Event Viewer**
    - Open **Event Viewer** (`eventvwr.msc`).
    - Navigate to:
@@ -80,10 +81,10 @@ This lab demonstrates how to audit **data backup and recovery** in a Windows env
      Windows Logs > Application
      ```
    - **Filter by Event IDs:**
-     - **Backup Successful** ➔ **Event ID 4**
-     - **Backup Failed** ➔ **Event ID 49**
-     - **Recovery Successful** ➔ **Event ID 123**
-     - **Recovery Failed** ➔ **Event ID 124**
+     - **Backup Successful** → **Event ID 4**
+     - **Backup Failed** → **Event ID 49**
+     - **Recovery Successful** → **Event ID 123**
+     - **Recovery Failed** → **Event ID 124**
    - **Document findings in an audit report**.
 
 2. **Check Backup Access Logs (Who Accessed Backup Files?)**
@@ -96,9 +97,10 @@ This lab demonstrates how to audit **data backup and recovery** in a Windows env
 
 ---
 
-## **📝 Audit Report Checklist**
+## **📜 Audit Report Checklist**
 ✅ **Backup policies are defined and enforced** (`gpedit.msc`).  
-✅ **Backup folder permissions are correctly configured** (`Get-Acl`).  
+✅ **Backup folder is created and properly configured** (`C:\Data Backup`).  
+✅ **Backup folder permissions are correctly set** (`Get-Acl`).  
 ✅ **Backup process completed successfully** (`wbadmin.msc`).  
 ✅ **Backup logs verify successful execution** (`eventvwr.msc`, Event ID 4).  
 ✅ **Files restored successfully and integrity confirmed** (`Get-FileHash`).  
