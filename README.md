@@ -6,7 +6,6 @@ This lab demonstrates how to **audit** data backup and recovery processes in Win
 ## Lab Objectives
 - Verify backup configurations and storage locations.
 - Assess access controls and security policies for backup security.
-- Ensure backup integrity using audit techniques.
 - Analyze event logs for backup and restore activities.
 
 ---
@@ -41,7 +40,7 @@ This lab demonstrates how to **audit** data backup and recovery processes in Win
 <br/>
    
 
-### Review Backup Logs
+#### Review Backup Logs
    - Open **Event Viewer (`eventvwr.msc`)**.
    - Navigate to:
      ```
@@ -56,7 +55,7 @@ This lab demonstrates how to **audit** data backup and recovery processes in Win
 <img src="https://i.imgur.com/5l6Eele.png" height="50%" width="80%" alt="Disk Sanitization Steps"/>
 <br/>
 
-2. **Check Recovery Logs**
+#### Check Recovery Logs
    - Navigate to **Event Viewer** and filter for:
      - **Recovery Successful** → Event ID 123
      - **Recovery Failed** → Event ID 124
