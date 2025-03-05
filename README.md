@@ -71,6 +71,11 @@ This lab demonstrates how to **audit** data backup and recovery processes in Win
 <br/>
 <img src="https://i.imgur.com/iTC8jJQ.png" height="50%" width="80%" alt="Disk Sanitization Steps"/>
 <br/>
+  <p align="center">
+<br/>
+<img src="https://i.imgur.com/u9zMAbL.png" height="50%" width="80%" alt="Disk Sanitization Steps"/>
+<br/>
+
 
 #### Check Recovery Logs
    - Navigate to **Event Viewer** and filter for:
