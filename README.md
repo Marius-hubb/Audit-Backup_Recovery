@@ -13,7 +13,9 @@ This lab demonstrates how to **audit** data backup and recovery processes in Win
 
 ## Lab Walk Through
 
-<p align="center">Verifying Backup Completion & Storage Location
+### Verifying Backup Completion & Storage Location
+   - Windows Server Backup > Local Backup
+   - Backup location is set to the folder \\\DOMAINCONTROLL\Data Backup
 <p align="center">
 <br/>
 <img src="https://i.imgur.com/Kfaz66R.png" height="50%" width="80%" alt="Disk Sanitization Steps"/>
