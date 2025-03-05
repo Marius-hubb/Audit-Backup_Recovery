@@ -12,7 +12,7 @@ This lab demonstrates how to **audit** data backup and recovery processes in Win
 
 ## Lab Walk Through
 
-#### Verifying Backup Completion & Storage Location
+#### Verify Backup Completion & Storage Location
    - Windows Server Backup > Local Backup
    - Backup location is set to the folder \\\DOMAINCONTROLL\Data Backup
 <p align="center">
@@ -40,7 +40,7 @@ This lab demonstrates how to **audit** data backup and recovery processes in Win
 <br/>
    
 
-#### Review Backup Logs
+#### Review Backup  & Recovery Logs
    - Open **Event Viewer (`eventvwr.msc`)**.
    - Navigate to:
      ```
@@ -49,10 +49,20 @@ This lab demonstrates how to **audit** data backup and recovery processes in Win
    - **Filter for Event IDs:**
      - **Backup Successful** → Event ID 4
      - **Backup Failed** → Event ID 49
-
+   - Navigate to:
+      ```
+     Windows Logs > Security
+     ```
+   - **Filter for Event ID 4663 (File Access)**.
   <p align="center">
 <br/>
 <img src="https://i.imgur.com/5l6Eele.png" height="50%" width="80%" alt="Disk Sanitization Steps"/>
+<br/>
+
+#### Perform Recovery Test in Windows Server Backup
+  <p align="center">
+<br/>
+<img src="https://i.imgur.com/iTC8jJQ.png" height="50%" width="80%" alt="Disk Sanitization Steps"/>
 <br/>
 
 #### Check Recovery Logs
