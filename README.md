@@ -4,24 +4,20 @@
 This lab demonstrates how to **audit** data backup and recovery processes in Windows. The focus is on ensuring compliance with **ISO 27001, PCI DSS, NIST 800-53, and HIPAA** by verifying backup integrity, access controls, and logging mechanisms.
 
 ## Lab Objectives
-- **Verify** backup configurations and storage locations.
-- **Assess** access controls and security policies for backup security.
-- **Ensure** backup integrity using audit techniques.
-- **Analyze** event logs for backup and restore activities.
+- Verify backup configurations and storage locations.
+- Assess access controls and security policies for backup security.
+- Ensure backup integrity using audit techniques.
+- Analyze event logs for backup and restore activities.
 
 ---
 
-## Lab Tasks
+## Lab Walk Through
 
-### Step 1: Verify Backup Completion & Storage Location
-1. **Check Backup Configuration**
-   - Open **Windows Server Backup (`wbadmin.msc`)**.
-   - Navigate to **Local Backup** > **View Backups**.
-   - Identify the latest backup and document the following:
-     - **Date and time of the last backup**
-     - **Storage location** (`\DOMAINCONTROLL\Data Backup` or another directory)
-     - **Backup status (Successful/Failed)**
-   - **Audit Task**: Record findings in the audit report.
+<p align="center">Verifying Backup Completion & Storage Location
+<p align="center">
+<br/>
+<img src="https://i.imgur.com/Kfaz66R.png" height="50%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
 
 2. **Confirm Backup File Integrity**
    - Navigate to the backup storage folder (`C:\BackupLocation` or `\DOMAINCONTROLL\Data Backup`).
