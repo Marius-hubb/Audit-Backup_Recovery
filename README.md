@@ -60,6 +60,7 @@ This lab demonstrates how to **audit** data backup and recovery processes in Win
      Windows Logs > Security
      ```
    - Filter for Event ID 4663 (File Access).
+   - Identify unauthorized access attempts and document findings.
   <p align="center">
 <br/>
 <img src="https://i.imgur.com/DRUd8gk.png" height="50%" width="80%" alt="Disk Sanitization Steps"/>
