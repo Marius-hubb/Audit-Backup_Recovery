@@ -85,13 +85,5 @@ This lab demonstrates how to **audit** data backup and recovery processes in Win
 - **Backup logs verify successful execution (`eventvwr.msc`, Event ID 4).**  
 - **Access permissions properly configured (No 'Everyone' access).**  
 - **Access logs reviewed for unauthorized attempts (Event ID 4663).**  
-- **Audit report generated documenting compliance gaps and findings.**  
-
-
-2. **Check Recovery Logs**
-   - Navigate to **Event Viewer** and filter for:
-     - **Recovery Successful** → Event ID 123
-     - **Recovery Failed** → Event ID 124
-   - **Audit Task**: Verify recovery attempts and confirm success/failure.
 
 ---
